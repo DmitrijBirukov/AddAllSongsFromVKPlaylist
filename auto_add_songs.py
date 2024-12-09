@@ -82,12 +82,12 @@ def add_songs(driver: WebDriver, songs: list[WebElement]):
             EC.visibility_of_element_located((By.CLASS_NAME, "audio_row__action_add"))
             )
             button.click()
-            print(f'Трек №{count + 1} успешно добавлен')
+            print(f'Song №{count + 1} was succesfully added to your music')
             random_sleep()
 
         except Exception as e:
-             print(f"Не получилось нажать на кнопку: {e}")
-             print(f'Трек №{count + 1} не был добавлен')
+             print(f"Couldn't click add button: {e}")
+             print(f"Song №{count + 1} wasn't added")
              continue
         
         finally:
